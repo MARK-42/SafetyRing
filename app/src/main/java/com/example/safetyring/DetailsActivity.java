@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -45,18 +46,45 @@ public class DetailsActivity extends AppCompatActivity {
         submitbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                String n1=name1.getText().toString().trim();
-                String n2=name2.getText().toString().trim();
-                String e1=email1.getText().toString().trim();
-                String e2=email2.getText().toString().trim();
-                String p1=phone1.getText().toString().trim();
-                String p2=phone2.getText().toString().trim();
-
-                EmergencyDetails var = new EmergencyDetails(n1,n2,e1,e2,p1,p2);
-
+                UploadDetails();
             }
         });
+
+    }
+    public void UploadDetails(){
+        String n1=name1.getText().toString().trim();
+        if(TextUtils.isEmpty(n1)){
+            name1.setError("This field cant be empty");
+            return;
+        }
+        String n2=name2.getText().toString().trim();
+        if(TextUtils.isEmpty(n2)){
+            name2.setError("This field cant be empty");
+            return;
+        }
+        String e1=email1.getText().toString().trim();
+        if(TextUtils.isEmpty(e1)){
+            email1.setError("This field cant be empty");
+            return;
+        }
+        String e2=email2.getText().toString().trim();
+        if(TextUtils.isEmpty(e2)){
+            email2.setError("This field cant be empty");
+            return;
+        }
+        String p1=phone1.getText().toString().trim();
+        if(TextUtils.isEmpty(p1)){
+            phone1.setError("This field cant be empty");
+            return;
+        }
+        String p2=phone2.getText().toString().trim();
+        if(TextUtils.isEmpty(p2)){
+            phone2.setError("This field cant be empty");
+            return;
+        }
+
+        EmergencyDetails var = new EmergencyDetails(n1,n2,e1,e2,p1,p2);
+
 
     }
 }
