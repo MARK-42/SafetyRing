@@ -13,7 +13,9 @@ public class UserActivity extends AppCompatActivity {
 
     private FirebaseAuth auth;
     private Button logout;
-
+    private Button details;
+    private Button audio;
+    private Button tracking;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,6 +32,35 @@ public class UserActivity extends AppCompatActivity {
                 finish();
             }
         });
+
+
+        details = (Button)findViewById(R.id.details);
+        details.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent detailsIntent = new Intent(UserActivity.this, DetailsActivity.class);
+                startActivity(detailsIntent);
+            }
+        });
+
+        tracking = (Button)findViewById(R.id.tracking);
+        tracking.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent colorsIntent = new Intent(UserActivity.this, TrackingActivity.class);
+            }
+        });
+
+        audio = (Button)findViewById(R.id.audio);
+        audio.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent colorsIntent = new Intent(UserActivity.this, AudioActivity.class);
+            }
+        });
+
+
+
     }
 
     public void signOut() {
