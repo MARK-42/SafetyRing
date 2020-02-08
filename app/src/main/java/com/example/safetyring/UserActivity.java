@@ -55,7 +55,8 @@ public class UserActivity extends AppCompatActivity {
         audio.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent colorsIntent = new Intent(UserActivity.this, AudioActivity.class);
+                Intent audioIntent = new Intent(UserActivity.this, AudioActivity.class);
+                startActivity(audioIntent);
             }
         });
 
