@@ -3,6 +3,9 @@ package com.example.safetyring;
 public class EmergencyDetails {
     private String name1,name2,email1,email2,phone1,phone2;
 
+    public EmergencyDetails() {
+    }
+
     public EmergencyDetails(String name1, String name2, String email1, String email2, String phone1, String phone2) {
         this.name1 = name1;
         this.name2 = name2;

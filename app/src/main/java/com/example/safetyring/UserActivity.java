@@ -47,7 +47,8 @@ public class UserActivity extends AppCompatActivity {
         tracking.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent colorsIntent = new Intent(UserActivity.this, TrackingActivity.class);
+                Intent Intent = new Intent(UserActivity.this, TrackingActivity.class);
+                startActivity(Intent);
             }
         });
 

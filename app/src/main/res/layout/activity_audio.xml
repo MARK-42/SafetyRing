@@ -8,6 +8,7 @@
     tools:context=".AudioActivity">
 
     <Button
+        android:id="@+id/button_video"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Video"
@@ -17,6 +18,7 @@
         android:layout_marginBottom="25dp"/>
 
     <Button
+        android:id="@+id/button_audio"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Audio"
