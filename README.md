@@ -1,1 +1,1 @@
-"Test commit2"
+"Github link : https://github.com/MARK-42/SafetyRing"
